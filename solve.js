@@ -1,12 +1,12 @@
 'use strict';
 
-function *hi() {
-  yield 'Hello';
-  yield 'World';
-}
+function factorial(n) {
+  var result = 1;
 
-var g = hi();
-console.log(g.next());
-console.log(g.next());
-console.log(g.next());
-console.log(g.next());
+  for (var i = 1; i <= n; i++) {
+    result *= i;
+  }
+
+  return result;
+}
+exports.factorial = factorial;
