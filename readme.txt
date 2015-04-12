@@ -18,3 +18,5 @@ The man who smokes Blend lives next door to the one who keeps cats.
 The Norwegian lives in the first house.
 The man living in the house right in the middle drinks milk.
 The owner of the yellow house smokes Dunhill.
+
+https://www.brainbashers.com/showpuzzles.asp?puzzle=ZHZK
