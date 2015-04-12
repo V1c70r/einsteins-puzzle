@@ -1,9 +1,9 @@
 'use strict';
 
-var factorial = require('../solve').factorial;
-var uniq = require('../solve').uniq;
-var without = require('../solve').without;
-var permutation = require('../solve').permutation;
+var factorial = require('../solver').factorial;
+var uniq = require('../solver').uniq;
+var without = require('../solver').without;
+var permutation = require('../solver').permutation;
 
 describe('factorial', () => {
   it('should return 1 for 0', () => {
