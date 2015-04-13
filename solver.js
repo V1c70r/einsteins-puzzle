@@ -93,22 +93,16 @@ function solve() {
 
             // The man who smokes Blend has a neighbour who drinks water.
             var leftBlend = cigares.indexOf('Blend') - 1;
-            var rightBlend = cigares.indexOf('Blend') + 1;
-            var neighbourOfBlendDrinksWater = (leftBlend >= 0 && beverages[leftBlend] === 'Water') ||
-              (rightBlend < beverages.length && beverages[rightBlend] === 'Water');
-            if (!neighbourOfBlendDrinksWater) { continue cigares; }
+            var rightBlend = leftBlend + 2;
+            if (beverages[leftBlend] !== 'Water' && beverages[rightBlend] !== 'Water') { continue cigares; }
 
             // The man who keeps horses lives next door to the man who smokes Dunhill.
             var leftDunhill = cigares.indexOf('Dunhill') - 1;
-            var rightDunhill = cigares.indexOf('Dunhill') + 1;
-            var neighbourOfDunhillKeepsHorses = (leftDunhill >= 0 && pets[leftDunhill] === 'Horses') ||
-              (rightDunhill < pets.length && pets[rightDunhill] === 'Horses');
-            if (!neighbourOfDunhillKeepsHorses) { continue pets; }
+            var rightDunhill = leftDunhill + 2;
+            if (pets[leftDunhill] !== 'Horses' && pets[rightDunhill] !== 'Horses') { continue pets; }
 
             // The man who smokes Blend lives next door to the one who keeps cats.
-            var neighbourOfBlendKeepsCats = (leftBlend >= 0 && pets[leftBlend] === 'Cats') ||
-              (rightBlend < pets.length && pets[rightBlend] === 'Cats');
-            if (!neighbourOfBlendKeepsCats) { continue pets; }
+            if (pets[leftBlend] !== 'Cats' && pets[rightBlend] !== 'Cats') { continue pets; }
 
             printSolution();
           }
