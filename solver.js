@@ -31,7 +31,7 @@ exports.without = without;
  * @returns {Generator[Array]}
  */
 function *permutation(array) {
-  if (array.length <= 1) {
+  if (array.length === 1) {
     yield array;
   } else if (array.length === 2) {
     yield [array[0], array[1]];

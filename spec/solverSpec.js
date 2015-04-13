@@ -47,8 +47,8 @@ describe('permutation', () => {
     return values;
   }
 
-  it('should return a generator for an empty array', () => {
-    expect(allValues(permutation([]))).toEqual([[]]);
+  it('should return nothing for an empty array', () => {
+    expect(allValues(permutation([]))).toEqual([]);
   });
 
   it('should return a generator for an array with one item', () => {
