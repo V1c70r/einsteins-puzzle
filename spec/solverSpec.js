@@ -1,55 +1,8 @@
 'use strict';
 
-var factorial = require('../solver').factorial;
 var uniq = require('../solver').uniq;
 var without = require('../solver').without;
 var permutation = require('../solver').permutation;
-
-describe('factorial', () => {
-  it('should return 1 for 0', () => {
-    expect(factorial(0)).toBe(1);
-  });
-
-  it('should return 1 for 1', () => {
-    expect(factorial(1)).toBe(1);
-  });
-
-  it('should return 2 for 2', () => {
-    expect(factorial(2)).toBe(2);
-  });
-
-  it('should return 6 for 3', () => {
-    expect(factorial(3)).toBe(6);
-  });
-
-  it('should return 24 for 4', () => {
-    expect(factorial(4)).toBe(24);
-  });
-
-  it('should return 120 for 5', () => {
-    expect(factorial(5)).toBe(120);
-  });
-
-  it('should return 720 for 6', () => {
-    expect(factorial(6)).toBe(720);
-  });
-
-  it('should return 5040 for 7', () => {
-    expect(factorial(7)).toBe(5040);
-  });
-
-  it('should return 40 320 for 8', () => {
-    expect(factorial(8)).toBe(40320);
-  });
-
-  it('should return 362 880 for 9', () => {
-    expect(factorial(9)).toBe(362880);
-  });
-
-  it('should return 3 628 800 for 10', () => {
-    expect(factorial(10)).toBe(3628800);
-  });
-});
 
 describe('uniq', () => {
   it('should return an empty array', () => {
@@ -64,7 +17,7 @@ describe('uniq', () => {
     expect(uniq([1, 2, 3, 'a', 'b', 'c'])).toEqual(['1', '2', '3', 'a', 'b', 'c']);
     expect(uniq([1, 2, 3, 'a', 'b', 'c', 'c', 'b', 'b', 'a', 3, 2, 1])).toEqual(['1', '2', '3', 'a', 'b', 'c']);
   });
-})
+});
 
 describe('without', () => {
   it('should not change an original array', () => {

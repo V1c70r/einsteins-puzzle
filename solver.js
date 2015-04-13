@@ -1,22 +1,6 @@
 'use strict';
 
 /**
- * Get a value of factorial.
- * @param {number} n
- * @returns {number}
- */
-function factorial(n) {
-  var result = 1;
-
-  for (var i = 1; i <= n; i++) {
-    result *= i;
-  }
-
-  return result;
-}
-exports.factorial = factorial;
-
-/**
  * Return unique elements of array.
  * @param Array[string]
  * @returns Array[string]
